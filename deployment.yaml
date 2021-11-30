@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mycustomcontainer
+spec:
+  selector:
+    matchLabels:
+      app: mycustomcontainer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mycustomcontainer
+        version: v1
+    spec:
+      containers:
+        - name: mycustomcontainer
+          image: mycustomcontainer:1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 4100
+      restartPolicy: Always
+        

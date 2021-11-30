@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mycustomcontainer
+  labels:
+    app: mycustomcontainer
+spec:
+  selector:
+    app: mycustomcontainer
+  ports:
+    - port: 4100
+      name: http
+  type: NodePort
