@@ -1,3 +1,19 @@
+
+**Steps to run locally on Minikube**
+
+Build image using Docker or Minikube image build command
+`minikube image build -f Dockerfile -t mycustomcontainer:1 .`
+
+Deploy container to cluster
+`kubectl apply -f deployment.yaml`
+
+Deploy service
+`kubectl apply -f service.yaml`
+
+Get url to access app
+`minikube service mycustomcontainer --url`
+
+
 # ![React + Redux Example App](project-logo.png)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aa569c8f-ebd5-413e-9fb2-e34facc71873/deploy-status)](https://app.netlify.com/sites/react-redux-realworld/deploys)
 [![RealWorld Frontend](https://img.shields.io/badge/realworld-frontend-%23783578.svg)](http://realworld.io)
