@@ -2,15 +2,19 @@
 **Steps to run locally on Minikube**
 
 Build image using Docker or Minikube image build command
+
 `minikube image build -f Dockerfile -t mycustomcontainer:1 .`
 
 Deploy container to cluster
+
 `kubectl apply -f deployment.yaml`
 
 Deploy service
+
 `kubectl apply -f service.yaml`
 
 Get url to access app
+
 `minikube service mycustomcontainer --url`
 
 
