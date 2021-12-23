@@ -1,5 +1,5 @@
 
-**Steps to run locally on Minikube**
+## Steps to run locally on Minikube
 
 Build image using Docker or Minikube image build command
 
@@ -16,6 +16,10 @@ Deploy service
 Get url to access app
 
 `minikube service mycustomcontainer --url`
+
+## Deploy using Helm
+
+`helm install realworldapp helm/`
 
 
 # ![React + Redux Example App](project-logo.png)
